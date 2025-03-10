@@ -1,0 +1,18 @@
+---
+import DownArrow from "../assets/icons/DownArrow.astro";
+
+const { titulo, contenido, className } = Astro.props;
+---
+
+<style>
+  summary {
+    list-style: none;
+  }
+</style>
+<details class="w-[500px] ">
+  <summary class={`bg-white px-[10px] h-[50px] flex justify-between items-center hover:shadow-lg transition duration-[.3s] ${className}`}>
+    <p class="font-semibold">Click</p>
+    <DownArrow width="30"/>
+  </summary>
+  <p class="bg-gray-100">Contenido</p>
+</details>
