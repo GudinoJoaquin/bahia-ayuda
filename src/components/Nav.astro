@@ -1,7 +1,8 @@
 ---
+import Menu from "../assets/icons/Menu.astro";
 ---
 
-<nav class={`top-0 left-0 w-full z-50 bg-gradient-to-r from-white to-gba-blue shadow-md`}>
+<nav class="relative top-0 left-0 w-full z-50 bg-gradient-to-r from-white to-gba-blue shadow-md">
   <div class="flex justify-between items-center p-[8px]">
     <div class="ml-[10px] flex items-center">
       <img
@@ -10,13 +11,25 @@
         class="w-[150px]"
       />
     </div>
-    <div class="flex items-center">
-      <img
-        src="../../public/bahia-logo-muni.png"
-        alt="Municipio de Bahía Blanca (Buenos Aires, Argentina)"
-        class="w-[150px]"
-      />
+    <div class="flex items-center z-10">
+      <button id="menu-toggle">
+        <Menu color="white" size="35" id="menu-icon" />
+      </button>
     </div>
   </div>
   <div class="bg-gradient-to-r from-gba-blue to-gba-pink w-full h-[4px]"></div>
+  
+  <!-- Menú desplegable -->
+  <div id="menu" class="hidden absolute top-[-100%] left-0 w-full bg-gba-blue transition-all duration-300">
+    <ul class="flex flex-col text-center p-4">
+      <li><a href="/" class="block py-2 text-white font-semibold">Inicio</a></li>
+      <li><a href="/ayuda" class="block py-2 text-white font-semibold">Ayuda</a></li>
+      <li><a href="/salud" class="block py-2 text-white font-semibold">Hospitales</a></li>
+      <li><a href="/telefonos" class="block py-2 text-white font-semibold">Telefonos</a></li>
+      <li><a href="/refugios" class="block py-2 text-white font-semibold">Refugios</a></li>
+
+    </ul>
+  </div>
 </nav>
+
+<script src="../utils/nav.js"></script>
