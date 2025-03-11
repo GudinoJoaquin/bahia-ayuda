@@ -1,0 +1,30 @@
+---
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import Fuente from "../components/Fuente.astro";
+import { centros } from '../utils/centros.js'
+import Hospital from "../components/Hospital.astro";
+
+---
+
+<style>
+  iframe #datos {
+    display: none;
+  }
+</style>
+
+<Layout>
+  <main class="mx-[10px] mt-[10px]">
+    <h2 class="text-gba-blue font-bold text-[30px] mb-[20px]">
+      Centros de salud
+    </h2>
+    <section class="flex flex-col gap-[30px]">
+      {centros.map(centro => (
+        <Hospital nombre={centro.nombre} direccion={centro.direccion} telefono={centro.telefono} horario = {centro.horario}/>
+      ))}
+    </section>
+    <section class="my-[50px]">
+      <iframe src="https://bahia.gob.ar/centrossalud/indexCS.php" width="100%" height="500px" scrolling="no"></iframe>
+    </section>
+  </main>
+</Layout>
