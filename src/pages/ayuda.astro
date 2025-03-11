@@ -5,127 +5,61 @@ import Fuente from "../components/Fuente.astro";
 ---
 
 <Layout>
-  <main class="mx-[10px] mt-[10px]">
-    <h2 class="text-gba-blue font-bold text-[30px] mb-[20px]">
-      ¿Qué hacer en caso de inundación?
-    </h2>
-    <section>
-      <div class="ml-[20px]">
-
-        <li class="text-[20px] mb-[30px] text-balance">Conservá la calma.</li>
-        
-        <li class="text-[20px] mb-[30px] text-balance">
-          Cerrá la llave de gas, agua y cortá la electricidad.
-        </li>
-        
-        <li class="text-[20px] mb-[30px] text-balance">
-          Evacuá hacia una zona segura, que por lo general son las más altas.
-        </li>
-        
-        <li class="text-[20px] mb-[30px] text-balance">
-          Si te sorprende el agua dentro de la vivienda, evitá sótanos y planta
-          baja.
-        </li>
-
-      <li class="text-[20px] mb-[30px] text-balance">
-        Llamá a los Bomberos para que te ayuden a evacuar (Telefono de
-        emrgencia: 100).
-      </li>
-      
-      <li class="text-[20px] mb-[30px] text-balance">
-        Mantené cerradas puertas y ventanas, para evitar corrientes de agua
-        dentro de la vivienda.
-      </li>
-      
-      <li class="text-[20px] mb-[30px] text-balance">
-        No usés ningún tipo de vehículo como auto, moto o bicicleta.
-      </li>
-      
-      <li class="text-[20px] mb-[30px] text-balance">
-        No ubicarse cerca de postes de electricidad o cables.
-      </li>
-      
-      <li class="text-[20px] mb-[30px] text-balance">
-        Si hay heridos, llamá a las autoridades. No intentés moverlos.
-      </li>
-      
-      <li class="text-[20px] mb-[30px] text-balance">
-        Informá a las autoridades si hay alguien que tenga movilidad reducida o
-        no pueda evacuarse por sus propios medios.
-      </li>
-      
-      <li class="text-[20px] mb-[30px] text-balance">
-        Prestá atención solo a los avisos de las autoridades a cargo.
-      </li>
-      
-      <li class="text-[20px] mb-[30px] text-balance">
-        No intentés caminar o nadar por caminos inundados o cauces de río.
-      </li>
-      
-      <li class="text-[20px] mb-[30px] text-balance">
-        Señalizá en caso que la casa tenga pozo negro, por las dudas que este se
-        derrumbe.
-      </li>
-      
-      <li class="text-[20px] mb-[30px] text-balance">
-        Bebé agua potabilizada, no utilicés el agua de la canilla.
-      </li>
-      
-      <li class="text-[20px] mb-[30px] text-balance">
-        Tené siempre cerca una radio a pilas (tené pilas de repuesto) conocé lo
-        que está sucediendo.
-      </li>
-      
-      <li class="text-[20px] mb-[30px] text-balance">
-        Agenda los números de Protección Civil (103), Bomberos (100) y Policía (911).
-      </li>
-    </div>
-    </section>
-    <section class="mt-[50px]">
-      <h2 class="text-gba-blue font-bold text-[30px] mb-[20px]">
-        ¿Qué hacer después de una inundación?
+  <main class="mx-4 mt-4 text-gray-800">
+    <section class="bg-white p-6 rounded-lg shadow-lg border border-gray-300">
+      <h2 class="text-center text-2xl font-bold bg-[oklch(60.85%_0.229_2.39)] text-white p-3 rounded-lg mb-6">
+        ❗️ ¿Qué hacer en caso de inundación?
       </h2>
-      <div class="ml-[20px]">
-        <li class="text-[20px] mb-[30px] text-balance">
-          No regresés a la vivienda hasta que las autoridades a cargo lo
-          recomienden.
-        </li>
-        <li class="text-[20px] mb-[30px] text-balance">
-          Al llegar a ella, tratá de usar calzado aislante (calzado de goma) y
-          verificar el estado de la conexión eléctrica. Debe estar desconectada.
-          No tocar ni pisar cables.
-        </li>
-        <li class="text-[20px] mb-[30px] text-balance">
-          Tené cuidado con vidrios rotos y objetos que te lastimen. Usá zapatos
-          de suela gruesa y linterna a pilas para ver dónde se pisa.
-        </li>
-        <li class="text-[20px] mb-[30px] text-balance">
-          Verificá paredes, piso y techo para asegurar que no hay riesgo de
-          derrumbe. También revisá los productos químicos mojados y los animales
-          muertos.
-        </li>
-        <li class="text-[20px] mb-[30px] text-balance">
-          No consumás ningún alimento que haya estado en contacto con el agua.
-          Si hubo interrupción eléctrica considerá que los alimentos en el
-          freezer se conservan 24 horas y en la heladera seis si se mantuvieron
-          cerrados.
-        </li>
-        <li class="text-[20px] mb-[30px] text-balance">
-          En caso de anegamiento, esperá a que baje el agua para empezar a
-          limpiar.
-        </li>
-        <li class="text-[20px] mb-[30px] text-balance">
-          Realizá una limpieza profunda de pisos, paredes, muebles y otros
-          objetos utilizando una taza de lavandina (pocillo de café) cada 10
-          litros de agua.
-        </li>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-gray-100 p-4 rounded-lg shadow-md border border-gray-300">
+          <ul class="list-disc pl-6 space-y-3">
+            <li><strong>😊 Conservá la calma.</strong></li>
+            <li>⚡ Cerrá la llave de <strong>gas, agua y electricidad</strong>.</li>
+            <li>➡️ Evacuá hacia una <strong>zona segura</strong>.</li>
+            <li>🏠 Evitá <strong>sótanos y planta baja</strong> si el agua ingresa.</li>
+            <li>📱 Llamá a los <strong>Bomberos (100)</strong> si necesitás ayuda.</li>
+            <li>🚷 Mantené <strong>cerradas puertas y ventanas</strong>.</li>
+            <li>❌ No usés <strong>vehículos</strong> (auto, moto, bici).</li>
+            <li>💡 Evitá <strong>cables y postes eléctricos</strong>.</li>
+          </ul>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-lg shadow-md border border-gray-300">
+          <ul class="list-disc pl-6 space-y-3">
+            <li>🛑 Si hay heridos, <strong>llamá a emergencias</strong>.</li>
+            <li>♻️ Informá si hay personas con <strong>movilidad reducida</strong>.</li>
+            <li>📻 Prestá atención solo a <strong>avisos oficiales</strong>.</li>
+            <li>⛵️ No camines ni nades por <strong>zonas inundadas</strong>.</li>
+            <li>⚠ Señalizá <strong>pozos negros</strong> para evitar accidentes.</li>
+            <li>💧 Bebé <strong>agua potable</strong>, no de la canilla.</li>
+            <li>🎧 Tené una <strong>radio a pilas</strong> para informarte.</li>
+            <li>📞 Agenda <strong>Protección Civil (103), Bomberos (100), Policía (911)</strong>.</li>
+          </ul>
+        </div>
       </div>
     </section>
-    <section class="mb-[20px]">
-      <Fuente
-        text="Fuente oficial: Argentina.gob.ar"
-        fuente="https://www.argentina.gob.ar/sinagir/riesgos-frecuentes/inundacion/que-hacer"
-      />
+
+    <section class="bg-white p-6 rounded-lg shadow-lg border border-gray-300 mt-8">
+      <h2 class="text-center text-2xl font-bold bg-[oklch(62.92%_0.109_210.85)] text-white p-3 rounded-lg mb-6">
+        🏰 ¿Qué hacer después de una inundación?
+      </h2>
+      <div class="bg-gray-100 p-4 rounded-lg shadow-md border border-gray-300">
+        <ul class="list-disc pl-6 space-y-3">
+          <li>❌ No regreses hasta que las <strong>autoridades lo indiquen</strong>.</li>
+          <li>🪖 Usá <strong>calzado aislante</strong> y verificá la electricidad.</li>
+          <li>⛏ Tené cuidado con <strong>vidrios rotos y escombros</strong>.</li>
+          <li>🏠 Verificá que no haya <strong>riesgo de derrumbe</strong>.</li>
+          <li>🍲 No consumas <strong>alimentos contaminados</strong>.</li>
+          <li>🌧️ Esperá a que baje el agua para <strong>limpiar</strong>.</li>
+          <li>🚿 Limpiá con <strong>lavandina</strong> (1 pocillo cada 10L de agua).</li>
+        </ul>
+      </div>
     </section>
+
+    <div class="my-6 flex justify-end">
+      <a href="https://www.argentina.gob.ar/sinagir/riesgos-frecuentes/inundacion/que-hacer" 
+         class="bg-[oklch(62.92%_0.109_210.85)] hover:bg-[oklch(60.85%_0.229_2.39)] text-white font-bold py-2 px-4 rounded-lg flex items-center transition">
+        🔗 Visitar <strong>Fuente oficial: Argentina.gob.ar</strong>
+      </a>
+    </div>
   </main>
 </Layout>
