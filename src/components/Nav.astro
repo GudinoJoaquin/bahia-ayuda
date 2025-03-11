@@ -19,8 +19,7 @@ import Menu from "../assets/icons/Menu.astro";
   </div>
   <div class="bg-gradient-to-r from-gba-blue to-gba-pink w-full h-[4px]"></div>
 
-  <!-- Menú con animación -->
-  <div id="menu" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-gba-blue">
+  <div id="menu" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-gba-pink">
     <ul class="flex flex-col text-center p-4">
       <li><a href="/" class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105">Inicio</a></li>
       <li><a href="/ayuda" class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105">Ayuda</a></li>
@@ -38,11 +37,9 @@ import Menu from "../assets/icons/Menu.astro";
 
     menuToggle.addEventListener("click", function () {
       if (menu.classList.contains("max-h-0")) {
-        // Abre el menú
         menu.classList.remove("max-h-0");
-        menu.classList.add("max-h-[500px]"); // Ajusta la altura según el contenido
+        menu.classList.add("max-h-[500px]"); 
       } else {
-        // Cierra el menú
         menu.classList.remove("max-h-[500px]");
         menu.classList.add("max-h-0");
       }
