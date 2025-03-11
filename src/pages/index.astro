@@ -4,14 +4,32 @@ import Layout from "../layouts/Layout.astro";
 import Help from "../components/Help.astro";
 import Fuentes from "../components/Fuentes.astro";
 import FAQ from "../components/FAQ.astro";
+import Nav from "../components/Nav.astro"
 import Footer from "../components/Footer.astro";
 import Main from "../components/Main.astro"
 ---
 
 <Layout>
+<<<<<<< HEAD
   <Main />
   <Help text="Ayuda" />
   <Fuentes />
   <FAQ />
   <Footer />
+=======
+	<div>
+
+		<Nav/>
+		<Help text="Ayuda" />
+	</div>
+	<div>
+
+		<Fuentes />
+		<FAQ />
+	</div>
+	<div>
+
+		<Footer/>
+	</div>
+>>>>>>> b082d1f92cd9dcdd6944a8e616b7d5a5f3345afa
 </Layout>
