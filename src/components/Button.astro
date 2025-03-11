@@ -1,0 +1,11 @@
+---
+const { text = "Necesito ayuda", href, className } = Astro.props;
+---
+
+<a
+  class={`mt-6 px-6 py-2 bg-gba-blue text-white rounded-lg
+                font-medium transition-all hover:bg-transparent border-2 hover:text-gba-pink hover:border-gba-pink ${className}`}
+  href={href}
+>
+  {text}
+</a>

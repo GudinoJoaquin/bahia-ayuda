@@ -10,6 +10,6 @@ const { link, title, logo} = Astro.props;
 ---
 
 <a href={link} class="flex flex-col items-center p-4 bg-white shadow-lg rounded-lg transition-transform hover:scale-105">
-  <div class="w-12 h-12 text-blue-500" set:html={logo}></div>
-  <span class="text-[#e61794] font-medium mt-2">{title}</span>
+  <div class="w-12 h-12 text-gba-blue" set:html={logo}></div>
+  <span class="text-gba-pink font-medium mt-2">{title}</span>
 </a>
