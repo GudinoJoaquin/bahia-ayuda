@@ -1,4 +1,5 @@
 ---
+import Button from "../components/Button.astro";
 import MainButton from "../components/MainButton.astro";
 ---
 
@@ -24,8 +25,8 @@ import MainButton from "../components/MainButton.astro";
   }
 </style>
 
-<div
-  class="relative min-h-screen bg-white flex flex-col justify-center items-center text-center"
+<section
+  class="relative min-h-screen bg-transparent flex flex-col justify-center items-center text-center"
 >
   <div class="relative w-full">
     <h1
@@ -49,15 +50,10 @@ import MainButton from "../components/MainButton.astro";
   </div>
 
   <p class="text-lg text-gray-800 max-w-[90%] sm:max-w-[80%]">
-  Encuentra o brinda ayuda.
+    Encuentra o brinda ayuda.
   </p>
 
-  <button
-    class="mt-6 px-6 py-2 bg-blue-500 text-white border border-blue-500 rounded-lg
-                font-medium transition-all hover:bg-transparent hover:text-fuchsia-500 hover:border-fuchsia-500"
-  >
-    Necesito ayuda
-  </button>
+  <Button href="/ayuda" />
 
   <div class="flex flex-wrap justify-center items-center gap-6 mt-6">
     <MainButton
@@ -76,4 +72,4 @@ import MainButton from "../components/MainButton.astro";
       logo='<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 13V4q0-.425.288-.712T13 3h7q.425 0 .713.288T21 4v5q0 .425-.288.713T20 10h-5zm7.95 8q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"/></svg>'
     />
   </div>
-</div>
+</section>

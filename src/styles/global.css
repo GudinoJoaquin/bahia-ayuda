@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@theme {
+  --color-gba-blue: oklch(62.92% 0.109 210.85);
+  --color-gba-pink: oklch(60.85% 0.229 2.39);
+}

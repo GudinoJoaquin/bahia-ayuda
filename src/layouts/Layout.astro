@@ -1,22 +1,88 @@
+---
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body class="grid grid-rows-[auto_1fr_auto] h-screen">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+  <body class="relative grid grid-rows-[auto_1fr_auto] min-h-screen bg-transparent">
+    <!-- Contenedor para las imágenes -->
+    <div id="background-pattern" class="absolute inset-0 -z-10 overflow-hidden"></div>
+
+    <section>
+      <Nav />
+    </section>
+    <section>
+      <slot />
+    </section>
+    <section>
+      <Footer />
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            const background = document.getElementById("background-pattern");
+            if (!background) return;
+
+            // Cantidad de imágenes de cada tipo
+            const countPB = 15; // Cambia este valor para definir cuántas 'pb.svg' quieres
+            const countPA = 15; // Cambia este valor para definir cuántas 'pa.svg' quieres
+
+            const images = [];
+            for (let i = 0; i < countPB; i++) images.push("/pb.svg");
+            for (let i = 0; i < countPA; i++) images.push("/pa.svg");
+
+            // Mezcla el array de imágenes para distribuirlas aleatoriamente
+            images.sort(() => Math.random() - 0.5);
+
+            images.forEach((src) => {
+              const img = document.createElement("img");
+              img.src = src;
+              img.classList.add("absolute", "opacity-35");
+
+              // Distribución más amplia
+              img.style.left = Math.random() * 95 + "vw";
+              img.style.top = Math.random() * 95 + "vh";
+
+              // Tamaño aleatorio con más variedad (algunas más pequeñas)
+              const size = Math.random() < 0.5 ? Math.floor(Math.random() * 40) + 30 : Math.floor(Math.random() * 80) + 50;
+              img.style.width = size + "px";
+              img.style.height = size + "px";
+
+              // Rotación aleatoria con tres posibilidades: sin rotación, derecha o izquierda
+              const rotations = [0, Math.random() * 15 + 5, -(Math.random() * 15 + 5)];
+              const rotation = rotations[Math.floor(Math.random() * rotations.length)];
+              img.style.transform = `rotate(${rotation}deg)`;
+
+              background.appendChild(img);
+            });
+          }, 100);
+        });
+      });
+    </script>
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #background-pattern {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
 </style>
