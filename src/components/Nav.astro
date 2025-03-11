@@ -12,24 +12,40 @@ import Menu from "../assets/icons/Menu.astro";
       />
     </div>
     <div class="flex items-center z-10">
-      <button id="menu-toggle">
+      <button id="menu-toggle" class="cursor-pointer p-2 transition-transform duration-300 hover:scale-110 active:scale-90">
         <Menu color="white" size="35" id="menu-icon" />
       </button>
     </div>
   </div>
   <div class="bg-gradient-to-r from-gba-blue to-gba-pink w-full h-[4px]"></div>
-  
-  <!-- Menú desplegable -->
-  <div id="menu" class="hidden absolute top-[-100%] left-0 w-full bg-gba-blue transition-all duration-300">
-    <ul class="flex flex-col text-center p-4">
-      <li><a href="/" class="block py-2 text-white font-semibold">Inicio</a></li>
-      <li><a href="/ayuda" class="block py-2 text-white font-semibold">Ayuda</a></li>
-      <li><a href="/salud" class="block py-2 text-white font-semibold">Hospitales</a></li>
-      <li><a href="/telefonos" class="block py-2 text-white font-semibold">Telefonos</a></li>
-      <li><a href="/refugios" class="block py-2 text-white font-semibold">Refugios</a></li>
 
+  <!-- Menú con animación -->
+  <div id="menu" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-gba-blue">
+    <ul class="flex flex-col text-center p-4">
+      <li><a href="/" class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105">Inicio</a></li>
+      <li><a href="/ayuda" class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105">Ayuda</a></li>
+      <li><a href="/salud" class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105">Hospitales</a></li>
+      <li><a href="/telefonos" class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105">Teléfonos</a></li>
+      <li><a href="/refugios" class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105">Refugios</a></li>
     </ul>
   </div>
 </nav>
 
-<script src="../utils/nav.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    menuToggle.addEventListener("click", function () {
+      if (menu.classList.contains("max-h-0")) {
+        // Abre el menú
+        menu.classList.remove("max-h-0");
+        menu.classList.add("max-h-[500px]"); // Ajusta la altura según el contenido
+      } else {
+        // Cierra el menú
+        menu.classList.remove("max-h-[500px]");
+        menu.classList.add("max-h-0");
+      }
+    });
+  });
+</script>
