@@ -1,9 +1,8 @@
 ---
-import Help from "./Help.astro";
 ---
 
-<section class="">
-  <div class="flex justify-between items-center bg-white p-[8px]">
+<nav class="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+  <div class="flex justify-between items-center p-[8px]">
     <div class="ml-[10px]">
       <img
         src="https://gba.gob.ar/imagenes/logo_gba_footer_blanco.svg"
@@ -12,16 +11,12 @@ import Help from "./Help.astro";
       />
     </div>
     <div class="mr-[10px]">
-      <div class="flex gap-[20px]">
-        <img
-          src="https://www.bahia.gob.ar/wp-content/uploads/2023/12/municipio-de-bahia-blanca-web-b.png"
-          alt="Municipio de Bahía Blanca (Buenos Aires, Argentina)"
-          class="w-[200px] invert"
-        />
-        <Help text="Ayuda" />
-      </div>
+      <img
+        src="https://www.bahia.gob.ar/wp-content/uploads/2023/12/municipio-de-bahia-blanca-web-b.png"
+        alt="Municipio de Bahía Blanca (Buenos Aires, Argentina)"
+        class="w-[200px] invert"
+      />
     </div>
   </div>
-  <div class="bg-gradient-to-r from-[#74c9e3] to-[#e61794] w-full h-[4px]">
-  </div>
-</section>
+  <div class="bg-gradient-to-r from-[#74c9e3] to-[#e61794] w-full h-[4px]"></div>
+</nav>

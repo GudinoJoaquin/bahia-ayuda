@@ -1,18 +1,81 @@
 ---
 import DownArrow from "../assets/icons/DownArrow.astro";
 
-const { titulo, contenido, className } = Astro.props;
+const faqs = [
+  {
+    titulo: "¿Qué hacer en caso de emergencia en Bahía Blanca?",
+    contenido:
+      "Si te encuentras en una situación de emergencia, puedes comunicarte con los números de ayuda locales o dirigirte a un refugio cercano.",
+    enlace: "#",
+  },
+  {
+    titulo: "¿Dónde encontrar información sobre cortes de ruta?",
+    contenido:
+      "Consulta los reportes oficiales para conocer el estado de las rutas y posibles desvíos en la zona.",
+    enlace: "#",
+  },
+  {
+    titulo: "¿Dónde encontrar información sobre cortes de ruta?",
+    contenido:
+      "Consulta los reportes oficiales para conocer el estado de las rutas y posibles desvíos en la zona.",
+    enlace: "#",
+  },
+  {
+    titulo: "¿Dónde encontrar información sobre cortes de ruta?",
+    contenido:
+      "Consulta los reportes oficiales para conocer el estado de las rutas y posibles desvíos en la zona.",
+    enlace: "#",
+  },
+  {
+    titulo: "¿Dónde encontrar información sobre cortes de ruta?",
+    contenido:
+      "Consulta los reportes oficiales para conocer el estado de las rutas y posibles desvíos en la zona.",
+    enlace: "#",
+  },
+];
 ---
 
 <style>
-  summary {
-    list-style: none;
+  details {
+    transition: all 0.3s ease-in-out;
+  }
+
+  details[open] summary ~ div {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>
-<details class="w-[500px] ">
-  <summary class={`bg-white px-[10px] h-[50px] flex justify-between items-center hover:shadow-lg transition duration-[.3s] ${className}`}>
-    <p class="font-semibold">Click</p>
-    <DownArrow width="30"/>
-  </summary>
-  <p class="bg-gray-100">Contenido</p>
-</details>
+
+<section class="flex flex-col items-center w-full max-w-[800px] mx-auto mb-50 px-4">
+  <h2 class="text-3xl font-bold text-blue-500 mb-6 text-center">Preguntas Frecuentes</h2>
+
+  {faqs.map(({ titulo, contenido, enlace }) => (
+    <details
+      class="w-full max-w-[700px] border-2 rounded-xl overflow-hidden bg-white shadow-lg transition-all duration-300 mb-4"
+      style={{
+        borderImage: "linear-gradient(45deg, #74c9e3, #e61794) 1",
+      }}
+    >
+      <summary class="px-6 py-4 flex justify-between items-center text-black text-lg font-semibold bg-transparent cursor-pointer hover:bg-gray-100 transition-all">
+        <span>{titulo}</span>
+        <DownArrow width="24" />
+      </summary>
+      <div class="px-6 py-4 text-gray-700 border-t border-gray-300 flex flex-col gap-2">
+        <p>{contenido}</p>
+        <a href={enlace} class="text-[#e61794] hover:text-pink-500 transition self-end font-medium">
+          Más info →
+        </a>
+      </div>
+    </details>
+  ))}
+</section>
