@@ -2,30 +2,63 @@
 import Menu from "../assets/icons/Menu.astro";
 ---
 
-<nav class="relative top-0 left-0 w-full z-50 bg-gradient-to-r from-white to-gba-blue shadow-md">
+<nav
+  class="relative top-0 left-0 w-full z-50 bg-gradient-to-r from-white to-gba-blue shadow-md"
+>
   <div class="flex justify-between items-center p-[8px]">
     <div class="ml-[10px] flex items-center">
       <img
-        src="/public/logo_gba_footer_blanco.svg"
+        src="../public/logo_gba_footer_blanco.svg"
         alt="logo buenos aires provincia"
         class="w-[150px]"
       />
     </div>
     <div class="flex items-center z-10">
-      <button id="menu-toggle" class="cursor-pointer p-2 transition-transform duration-300 hover:scale-110 active:scale-90">
+      <button
+        id="menu-toggle"
+        class="cursor-pointer p-2 transition-transform duration-300 hover:scale-110 active:scale-90"
+      >
         <Menu color="white" size="35" id="menu-icon" />
       </button>
     </div>
   </div>
   <div class="bg-gradient-to-r from-gba-blue to-gba-pink w-full h-[4px]"></div>
 
-  <div id="menu" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-gba-pink">
+  <div
+    id="menu"
+    class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-gba-pink"
+  >
     <ul class="flex flex-col text-center p-4">
-      <li><a href="/" class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105">Inicio</a></li>
-      <li><a href="/ayuda" class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105">Ayuda</a></li>
-      <li><a href="/salud" class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105">Hospitales</a></li>
-      <li><a href="/telefonos" class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105">Teléfonos</a></li>
-      <li><a href="/refugios" class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105">Refugios</a></li>
+      <li>
+        <a
+          href="/"
+          class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105"
+          >Inicio</a>
+      </li>
+      <li>
+        <a
+          href="/ayuda"
+          class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105"
+          >Ayuda</a>
+      </li>
+      <li>
+        <a
+          href="/salud"
+          class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105"
+          >Hospitales</a>
+      </li>
+      <li>
+        <a
+          href="/telefonos"
+          class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105"
+          >Teléfonos</a>
+      </li>
+      <li>
+        <a
+          href="/refugios"
+          class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105"
+          >Refugios</a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -38,7 +71,7 @@ import Menu from "../assets/icons/Menu.astro";
     menuToggle.addEventListener("click", function () {
       if (menu.classList.contains("max-h-0")) {
         menu.classList.remove("max-h-0");
-        menu.classList.add("max-h-[500px]"); 
+        menu.classList.add("max-h-[500px]");
       } else {
         menu.classList.remove("max-h-[500px]");
         menu.classList.add("max-h-0");
