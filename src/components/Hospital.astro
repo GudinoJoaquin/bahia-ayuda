@@ -1,0 +1,10 @@
+---
+const { nombre, direccion, telefono, horario } = Astro.props
+---
+
+<section class="shadow-lg rounded-[10px] px-[10px] py-[15px]">
+  <h2 class="font-bold text-[20px]">{nombre}</h2>
+  <p><span class="font-semibold">Dirección:</span>  {direccion}</p>
+  <p><span class="font-semibold">Telefono:</span> {telefono}</p>
+  <p><span class="font-semibold">Horario:</span> {horario}</p>
+</section>
