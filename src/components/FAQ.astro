@@ -9,28 +9,31 @@ const faqs = [
     enlace: "#",
   },
   {
-    titulo: "¿Dónde encontrar información sobre cortes de ruta?",
+    titulo: "¿como hacer RCP?",
     contenido:
-      "Consulta los reportes oficiales para conocer el estado de las rutas y posibles desvíos en la zona.",
-    enlace: "#",
+      "en el siguiente enlace le dejamos un video de como realizar esta tecnica en caso de que sea necesario  .",
+    enlace: " https://www.argentina.gob.ar/salud/primerosauxilios/RCP",
+  },
+  {
+    titulo: "¿Como hacer un kit de supervivencia?",
+    contenido:
+      "En caso de que necesite realizar un kit de emergencia el siguiente link de cruz roja provee la informacion para hacerlo.",
+    enlace:
+      "https://www.redcross.org/cruz-roja/nosotros/noticias-y-eventos/articulos-de-noticias/La-preparacin-para-el-clima-severo-comienza-ahora-Use-los-consejos-de-seguridad-de-la-Cruz-Roja.html",
+  },
+  {
+    titulo: "¿Cuales son los telefonos de emergencia?",
+    contenido:
+      "Si necesita los numeros de emergencia de bahia blanca entre en el link.",
+    enlace:
+      "https://iosfa.gob.ar/novedades/408/bahia-blanca-telefonos-para-emergencias",
   },
   {
     titulo: "¿Dónde encontrar información sobre cortes de ruta?",
     contenido:
       "Consulta los reportes oficiales para conocer el estado de las rutas y posibles desvíos en la zona.",
-    enlace: "#",
-  },
-  {
-    titulo: "¿Dónde encontrar información sobre cortes de ruta?",
-    contenido:
-      "Consulta los reportes oficiales para conocer el estado de las rutas y posibles desvíos en la zona.",
-    enlace: "#",
-  },
-  {
-    titulo: "¿Dónde encontrar información sobre cortes de ruta?",
-    contenido:
-      "Consulta los reportes oficiales para conocer el estado de las rutas y posibles desvíos en la zona.",
-    enlace: "#",
+    enlace:
+      "https://www.bing.com/maps?mepi=0%7EPublicServicesAndGovernment%7EEmbedded%7ELocal_Magazine_List_Card_See_More&ty=17&q=vialidad+nacional+bahia+blanca&mb=-38.710854%7E-62.257599%7E-38.732899%7E-62.225815&ppois=-38.7328987121582_-62.257598876953125_19%C2%BA+Distrito+Bah%C3%ADa+Blanca+-+Direcci%C3%B3n+Nacional+de+Vialidad_YN9000x4407521135145867762%7E-38.710853576660156_-62.22581481933594_Vialidad+Nacional+19%C2%B0+Distrito_YN9000x3871273984919042342%7E&poicount=18&usebfpr=true&v=2&sV=1&FORM=MPSRPL&cp=-38.712095%7E-62.239419&lvl=14.3",
   },
 ];
 ---
@@ -56,26 +59,35 @@ const faqs = [
   }
 </style>
 
-<section class="flex flex-col items-center w-full max-w-[800px] mx-auto mb-50 px-4">
-  <h2 class="text-3xl font-bold text-gba-sky mb-6 text-center">Preguntas Frecuentes</h2>
+<section
+  class="flex flex-col items-center w-full max-w-[800px] mx-auto mb-50 px-4"
+>
+  <h2 class="text-3xl font-bold text-blue-500 mb-6 text-center">
+    Preguntas Frecuentes
+  </h2>
 
-  {faqs.map(({ titulo, contenido, enlace }) => (
-    <details
-      class="w-full max-w-[700px] border-2 rounded-xl overflow-hidden bg-white shadow-lg transition-all duration-300 mb-4"
-      style={{
-        borderImage: "linear-gradient(45deg, #74c9e3, #e61794) 1",
-      }}
-    >
-      <summary class="px-6 py-4 flex justify-between items-center text-black text-lg font-semibold bg-transparent cursor-pointer hover:bg-gray-100 transition-all">
-        <span>{titulo}</span>
-        <DownArrow width="50" />
-      </summary>
-      <div class="px-6 py-4 text-gray-700 border-t border-gray-300 flex flex-col gap-2">
-        <p>{contenido}</p>
-        <a href={enlace} class="text-gba-blue hover:text-gba-pink transition self-end font-medium">
-          Más info →
-        </a>
-      </div>
-    </details>
-  ))}
+  {
+    faqs.map(({ titulo, contenido, enlace }) => (
+      <details
+        class="w-full max-w-[700px] border-2 rounded-xl overflow-hidden bg-white shadow-lg transition-all duration-300 mb-4"
+        style={{
+          borderImage: "linear-gradient(45deg, #74c9e3, #e61794) 1",
+        }}
+      >
+        <summary class="px-6 py-4 flex justify-between items-center text-black text-lg font-semibold bg-transparent cursor-pointer hover:bg-gray-100 transition-all">
+          <span>{titulo}</span>
+          <DownArrow width="24" />
+        </summary>
+        <div class="px-6 py-4 text-gray-700 border-t border-gray-300 flex flex-col gap-2">
+          <p>{contenido}</p>
+          <a
+            href={enlace}
+            class="text-[#e61794] hover:text-pink-500 transition self-end font-medium"
+          >
+            Más info →
+          </a>
+        </div>
+      </details>
+    ))
+  }
 </section>
