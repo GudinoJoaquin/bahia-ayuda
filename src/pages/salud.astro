@@ -14,17 +14,38 @@ import Hospital from "../components/Hospital.astro";
 </style>
 
 <Layout>
-  <main class="mx-[10px] mt-[10px] bg-white">
-    <h2 class="text-gba-blue font-bold text-[30px] mb-[20px]">
-      Centros de salud
-    </h2>
-    <section class="flex flex-col gap-[30px]">
-      {centros.map(centro => (
-        <Hospital nombre={centro.nombre} direccion={centro.direccion} telefono={centro.telefono} horario = {centro.horario}/>
-      ))}
+  <main class="mx-4 mt-6 bg-white text-gray-900">
+    <h2 class="text-center text-2xl font-bold bg-gba-blue text-white p-3 rounded-lg mb-6">
+      🏥 Centros de Salud en Bahía Blanca
+    </h2>    
+
+    <section class="mb-6">
+      <iframe src="https://bahia.gob.ar/centrossalud/indexCS.php" 
+              class="w-full h-[300px] rounded-lg shadow-lg border border-gray-300"></iframe>
     </section>
-    <section class="my-[50px]">
-      <iframe src="https://bahia.gob.ar/centrossalud/indexCS.php" width="100%" height="500px" scrolling="no"></iframe>
-    </section>
+
+    <section class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4 m-6">
+  {centros.map(centro => (
+    <div class="relative bg-gray-50 p-4 rounded-lg shadow-md border border-gray-200 flex flex-col h-full gap-2 text-sm">
+      <!-- Barra lateral gris -->
+      <div class="absolute left-0 top-0 h-full w-2 bg-gba-pink rounded-l-lg"></div>
+      
+      <h3 class="text-lg font-bold text-gba-blue pl-3">{centro.nombre}</h3>
+      <div class="flex-grow pl-3">
+        <p><span class="font-bold">Dirección:</span> {centro.direccion}</p>
+        <p><span class="font-bold">Teléfono:</span> {centro.telefono}</p>
+        <p><span class="font-bold">Horario:</span> {centro.horario}</p>
+      </div>
+      <a 
+        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(centro.direccion)}`} 
+        target="_blank" 
+        class="mt-auto text-center bg-gba-blue hover:bg-gba-pink text-white font-semibold py-1.5 px-3 rounded-lg text-sm transition-all">
+        📍 Ver en Google Maps
+      </a>
+    </div>
+  ))}
+</section>
+   
   </main>
 </Layout>
+
