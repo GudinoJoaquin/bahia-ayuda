@@ -3,33 +3,36 @@ import Card from "../components/Card.astro";
 ---
 
 <div class="relative w-full max-w-5xl mx-auto mb-30 bg-transparent">
-  <div class="gallery js-flickity" data-flickity-options='{
+  <div
+    class="gallery js-flickity"
+    data-flickity-options='{
     "wrapAround": true,
     "prevNextButtons": true,
     "pageDots": true,
     "contain": true
-  }'>
+  }'
+  >
     <div class="gallery-cell">
-      <Card 
-        title="Información básica" 
-        description="Accede a números de emergencia, refugios disponibles y recomendaciones para quienes están en zonas afectadas." 
-        link="https://www.lanacion.com.ar/sociedad/donde-se-reciben-donaciones-para-bahia-blanca-nid10032025/" 
+      <Card
+        title="Información básica"
+        description="Accede a números de emergencia, refugios disponibles y recomendaciones para quienes están en zonas afectadas."
+        link="https://www.lanacion.com.ar/sociedad/donde-se-reciben-donaciones-para-bahia-blanca-nid10032025/"
       />
     </div>
 
     <div class="gallery-cell">
-      <Card 
-        title="Estado de las rutas" 
-        description="Consulta qué rutas están habilitadas y cuáles siguen afectadas por la inundación antes de viajar." 
-        link="https://www.lanacion.com.ar/sociedad/donde-se-reciben-donaciones-para-bahia-blanca-nid10032025/" 
+      <Card
+        title="Estado de las rutas"
+        description="Consulta qué rutas están habilitadas y cuáles siguen afectadas por la inundación antes de viajar."
+        link="https://www.argentina.gob.ar/transporte/vialidad-nacional/estado-de-rutas"
       />
     </div>
 
     <div class="gallery-cell">
-      <Card 
-        title="Ayuda para Bahía Blanca" 
-        description="Las familias afectadas por las inundaciones necesitan tu ayuda. Encuentra centros de donación y cómo colaborar." 
-        link="https://www.lanacion.com.ar/sociedad/donde-se-reciben-donaciones-para-bahia-blanca-nid10032025/" 
+      <Card
+        title="Ayuda para Bahía Blanca"
+        description="Las familias afectadas por las inundaciones necesitan tu ayuda. Encuentra centros de donación y cómo colaborar."
+        link="https://forms.gba.gob.ar/formulario/ab8e876e157e1e7dcea31f72c03c80a7114bb499320b1d61aa49f96b25ec9fc2dd051fc62439da777ade7416dc8cb102ee3ce89b309dbe65b9302b8f8cc89165"
       />
     </div>
   </div>
@@ -69,8 +72,10 @@ import Card from "../components/Card.astro";
   .flickity-prev-next-button:hover {
     background: black;
   }
-
 </style>
 
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+/>
