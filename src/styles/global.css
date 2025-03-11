@@ -4,3 +4,22 @@
   --color-gba-blue: oklch(62.92% 0.109 210.85);
   --color-gba-pink: oklch(60.85% 0.229 2.39);
 }
+
+/* Estilo del Scroll */
+::-webkit-scrollbar {
+  width: 3px; /* Más delgado */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Sin fondo visible */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gba-blue);
+  border-radius: 50px; /* Bordes más suaves */
+}
+
+/* Efecto hover en el scroll */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gba-pink); /* Cambio sutil al pasar el mouse */
+}
