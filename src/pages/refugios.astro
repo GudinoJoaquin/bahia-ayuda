@@ -10,6 +10,16 @@ import Layout from "../layouts/Layout.astro";
         🏠 Refugios de emergencia en Bahía Blanca
       </h2>
 
+      <!-- Mapa insertado aquí -->
+      <div class="w-full h-[400px] lg:h-[500px] mb-6 rounded-lg overflow-hidden shadow-md border border-gray-300">
+        <iframe 
+          class="w-full h-full" 
+          src="https://www.google.com/maps/d/u/0/embed?mid=1xWQUNOeCrfgJKnPjAKkxVRb34E2qpT0&ehbc=2E312F" 
+          allowfullscreen 
+          loading="lazy">
+        </iframe>
+      </div>
+
       <div class="bg-gray-100 p-6 rounded-lg shadow-md border border-gray-300">
         <p class="text-lg font-semibold mb-4">
           Si necesitas asistencia por el temporal, acude a uno de los centros de evacuación habilitados:
