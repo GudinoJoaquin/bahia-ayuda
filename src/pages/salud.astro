@@ -1,10 +1,7 @@
 ---
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
-import Fuente from "../components/Fuente.astro";
-import { centros } from '../utils/centros.js'
-import Hospital from "../components/Hospital.astro";
-
+import { centros } from "../utils/centros.js";
 ---
 
 <style>
@@ -24,28 +21,67 @@ import Hospital from "../components/Hospital.astro";
               class="w-full h-[300px] rounded-lg shadow-lg border border-gray-300"></iframe>
     </section>
 
-    <section class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4 m-6">
-  {centros.map(centro => (
-    <div class="relative bg-gray-50 p-4 rounded-lg shadow-md border border-gray-200 flex flex-col h-full gap-2 text-sm">
-      <!-- Barra lateral gris -->
-      <div class="absolute left-0 top-0 h-full w-2 bg-gba-pink rounded-l-lg"></div>
-      
-      <h3 class="text-lg font-bold text-gba-blue pl-3">{centro.nombre}</h3>
-      <div class="flex-grow pl-3">
-        <p><span class="font-bold">Dirección:</span> {centro.direccion}</p>
-        <p><span class="font-bold">Teléfono:</span> {centro.telefono}</p>
-        <p><span class="font-bold">Horario:</span> {centro.horario}</p>
+    <section class="mb-6 text-center">
+      <p class="text-lg font-semibold text-gray-700">Busca un hospital por nombre o dirección:</p>
+      <div class="relative max-w-md mx-auto mt-2">
+        <input 
+          id="searchInput"
+          type="text"
+          placeholder=" Escribe aquí..."
+          class="w-full p-3 pl-10 border border-gray-400 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">🔍</span>
       </div>
-      <a 
-        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(centro.direccion)}`} 
-        target="_blank" 
-        class="mt-auto text-center bg-gba-blue hover:bg-gba-pink text-white font-semibold py-1.5 px-3 rounded-lg text-sm transition-all">
-        📍 Ver en Google Maps
-      </a>
-    </div>
-  ))}
-</section>
-   
+    </section>
+
+    <section id="centrosList" class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4 m-6">
+      {centros.map((centro) => (
+        <div class="centro relative bg-gray-50 p-4 rounded-lg shadow-md border border-gray-200 flex flex-col h-full gap-2 text-sm" 
+             data-nombre={centro.nombre.toLowerCase()} 
+             data-direccion={centro.direccion.toLowerCase()}>
+          <!-- Barra lateral gris -->
+          <div class="absolute left-0 top-0 h-full w-2 bg-gba-pink rounded-l-lg"></div>
+          
+          <h3 class="text-lg font-bold text-gba-blue pl-3">{centro.nombre}</h3>
+          <div class="flex-grow pl-3">
+            <p><span class="font-bold">Dirección:</span> {centro.direccion}</p>
+            <p><span class="font-bold">Teléfono:</span> {centro.telefono}</p>
+            <p><span class="font-bold">Horario:</span> {centro.horario}</p>
+          </div>
+          <a 
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(centro.direccion)}`} 
+            target="_blank" 
+            class="mt-auto text-center bg-gba-blue hover:bg-gba-pink text-white font-semibold py-1.5 px-3 rounded-lg text-sm transition-all">
+            📍 Ver en Google Maps
+          </a>
+        </div>
+      ))}
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById("searchInput") as HTMLInputElement | null;
+        if (!searchInput) return;
+    
+        searchInput.addEventListener("input", () => filterCentros(searchInput));
+    
+        function filterCentros(input: HTMLInputElement) {
+          const query = input.value.toLowerCase();
+          const centros = document.querySelectorAll(".centro");
+    
+          centros.forEach((centro) => {
+            const nombre = centro.getAttribute("data-nombre") || "";
+            const direccion = centro.getAttribute("data-direccion") || "";
+    
+            if (nombre.includes(query) || direccion.includes(query)) {
+              (centro as HTMLElement).classList.remove("hidden"); 
+            } else {
+              (centro as HTMLElement).classList.add("hidden"); 
+            }
+          });
+        }
+      });
+    </script>
+    
   </main>
 </Layout>
-
