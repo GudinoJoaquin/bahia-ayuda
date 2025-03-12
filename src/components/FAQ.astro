@@ -3,35 +3,38 @@ import DownArrow from "../assets/icons/DownArrow.astro";
 
 const faqs = [
   {
-    titulo: "¿Cómo Hacer RCP?",
-    contenido: `Si una persona está inconsciente y no respira, se deben seguir estos pasos para realizar RCP: asegurar la escena, verificar la conciencia con palmadas y palabras, observar el movimiento torácico, llamar al 107 si no respira y comenzar las maniobras, que consisten en colocar las manos entrelazadas en el centro del pecho y realizar compresiones firmes de 100 a 120 por minuto con una profundidad de 5 cm, asegurando una compresión y relajación equilibradas, cambiando de reanimador cada 1 o 2 minutos si es posible.`,
-    enlace: "https://cruzroja.org.ar/blog/como-hacer-rcp/",
+    titulo: "Información Inmediata",
+    contenido:
+      "Verificá que tu casa sea segura antes de quedarte. No toques cables mojados ni equipos eléctricos. No camines en aguas profundas o turbias. Si debés evacuar, llevá documentos, medicamentos y lo esencial. Para saber más, consultá el siguiente enlace:",
+    enlace: "https://www.argentina.gob.ar/tema/emergencias",
   },
   {
-    titulo: "En Caso de Hemorragias y Heridas",
-    contenido: `Para controlar una hemorragia, es fundamental aplicar presión directa con los dedos o la palma sobre un apósito limpio sin retirar objetos clavados, mientras que, en una herida cortante, se debe lavar con agua limpia, aplicar antiséptico si es necesario y cubrir con un apósito estéril, prestando atención a señales de infección como fiebre, enrojecimiento, calor o dolor, y acudiendo al médico si aparecen.`,
-    enlace: "https://cruzroja.org.ar/blog/que-hacer-ante-una-hemorragia/",
+    titulo: "¿Cómo hacer RCP?",
+    contenido:
+    "En el siguiente enlace te dejamos un video sobre cómo realizar esta técnica en caso de que sea necesario.",
+    enlace: "https://www.argentina.gob.ar/salud/primerosauxilios/RCP",
   },
   {
-    titulo: "En Caso de Ahogamiento",
-    contenido: `Ante un caso de ahogamiento, es crucial priorizar la seguridad del rescatador utilizando objetos flotantes para asistir sin entrar al agua, verificar si la persona está consciente y respira, iniciar RCP si es necesario y, en caso de sospecha de lesión en la columna, evitar moverla y mantener alineada la cabeza, el cuello y la espalda hasta la llegada de ayuda profesional.`,
-    enlace: "https://www.argentina.gob.ar/salud/primerosauxilios",
-  },
-  {
-    titulo: "Prevenir Enfermedades",
-    contenido: `Para prevenir enfermedades, es fundamental reforzar medidas higiénico-dietéticas como el lavado de manos, el uso de alcohol en gel, la limpieza de superficies con lavandina, el consumo de agua y alimentos seguros, y la correcta disposición de residuos y excretas.
-`,
+    titulo: "¿Cómo hacer un kit de supervivencia?",
+    contenido:
+      "Si necesitás armar un kit de emergencia, el siguiente enlace de la Cruz Roja provee la información necesaria.",
     enlace:
-      "https://www.argentina.gob.ar/salud/dinesa/recomendaciones/control-inundaciones-inmunoprevenibles",
+    "https://www.redcross.org/cruz-roja/nosotros/noticias-y-eventos/articulos-de-noticias/La-preparacin-para-el-clima-severo-comienza-ahora-Use-los-consejos-de-seguridad-de-la-Cruz-Roja.html",
   },
   {
-    titulo: "¿Cómo Ahorrar Batería en el Celular?",
-    contenido: `Para ahorrar batería en el celular, activá el modo de ahorro de energía, reducí el brillo de la pantalla, desactivá conexiones innecesarias como Wi-Fi o Bluetooth y cerrá aplicaciones en segundo plano.`,
+    titulo: "¿Cuáles son los teléfonos de emergencia?",
+    contenido:
+    "Si necesitás los números de emergencia de Bahía Blanca, ingresá en el siguiente enlace.",
     enlace:
-      "https://www.infobae.com/tecno/2024/07/10/como-hacer-que-la-bateria-de-tu-celular-android-dure-mas-de-un-dia/",
+    "https://iosfa.gob.ar/novedades/408/bahia-blanca-telefonos-para-emergencias",
+  },
+  {
+    titulo: "¿Cómo potabilizar el agua?",
+    contenido:"En el siguiente enlace podés encontrar información sobre cómo potabilizar el agua en caso de necesidad.",
+    enlace:
+    "https://www.argentina.gob.ar/alimentarsaberes/limpiaryguardar/potabilizaragua",
   },
 ];
-
 ---
 
 <style>
@@ -72,7 +75,7 @@ const faqs = [
       >
         <summary class="px-6 py-4 flex justify-between items-center text-black text-lg font-semibold bg-transparent cursor-pointer hover:bg-gray-100 transition-all">
           <span>{titulo}</span>
-          <DownArrow width="24" />
+          <DownArrow width="24"/>
         </summary>
         <div class="px-6 py-4 text-gray-700 border-t border-gray-300 flex flex-col gap-2">
           <p>{contenido}</p>
@@ -89,6 +92,8 @@ const faqs = [
 </section>
 
 <script>
+  import DownArrow from "../assets/icons/DownArrow.astro";
+
   document.addEventListener("DOMContentLoaded", () => {
     const details = document.querySelectorAll("details");
 
