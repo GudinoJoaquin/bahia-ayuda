@@ -29,30 +29,35 @@ import MainButton from "../components/MainButton.astro";
   class="relative min-h-screen bg-transparent flex flex-col justify-center items-center text-center"
 >
 
- <div class="relative w-full px-[20px] flex justify-center">
+<div class="relative w-full px-[20px] flex justify-center">
   <h1
     class="lilita-one-regular font-bold bg-clip-text text-transparent relative leading-tight
-            text-[18vw] sm:text-[14vw] md:text-[12vw] lg:text-[11vw] xl:text-[9vw] 2xl:text-[7vw]
-            stroke-white"
-    style="-webkit-text-stroke: 10px oklch(60.85% 0.229 2.39); oklch(62.92% 0.109 210.85); "
+            text-[18vw] sm:text-[14vw] md:text-[12vw] lg:text-[11vw] xl:text-[9vw] 2xl:text-[7vw]"
+    style="
+      -webkit-text-stroke-width: 1vw;
+      -webkit-text-stroke-color: oklch(60.85% 0.229 2.39);
+    "
   >
     BahiaAyuda
   </h1>
 
   <div
     class="absolute inset-0 bg-cover bg-center bg-fixed myfilter"
-    style="background-image: url('/main.jpeg'); -webkit-background-clip: text; background-clip: text; text-fill-color: transparent;"
+    style="
+      background-image: url('/main.jpeg');
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    "
   >
     <h1
       class="lilita-one-regular font-bold text-transparent leading-tight
-              text-[16vw] sm:text-[14vw] md:text-[12vw] lg:text-[11vw] xl:text-[9vw] 2xl:text-[7vw]"
+              text-[18vw] sm:text-[14vw] md:text-[12vw] lg:text-[11vw] xl:text-[9vw] 2xl:text-[7vw]"
     >
       BahiaAyuda
     </h1>
   </div>
 </div>
-
-
   <p class="text-lg text-gray-800 max-w-[90%] sm:max-w-[80%]">
     Encuentra o brinda ayuda.
   </p>
