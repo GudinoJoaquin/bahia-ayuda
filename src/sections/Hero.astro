@@ -28,49 +28,66 @@ import MainButton from "../components/MainButton.astro";
 <section
   class="relative min-h-screen bg-transparent flex flex-col justify-center items-center text-center"
 >
-
-<div class="relative w-full px-[20px] flex justify-center">
-  <h1
-    class="lilita-one-regular font-bold bg-clip-text text-transparent relative leading-tight
+  <div class="relative w-full px-[20px] flex justify-center">
+    <h1
+      class="lilita-one-regular font-bold bg-clip-text text-transparent relative leading-tight
             text-[18vw] sm:text-[14vw] md:text-[12vw] lg:text-[11vw] xl:text-[9vw] 2xl:text-[7vw]"
-    style="
+      style="
       -webkit-text-stroke-width: 1vw;
       -webkit-text-stroke-color: oklch(60.85% 0.229 2.39);
     "
-  >
-    BahiaAyuda
-  </h1>
+    >
+      BahiaAyuda
+    </h1>
 
-  <div
-    class="absolute inset-0 bg-cover bg-center bg-fixed myfilter"
-    style="
+    <div
+      class="absolute inset-0 bg-cover bg-center bg-fixed myfilter"
+      style="
       background-image: url('/main.jpeg');
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     "
-  >
-    <h1
-      class="lilita-one-regular font-bold text-transparent leading-tight
-              text-[18vw] sm:text-[14vw] md:text-[12vw] lg:text-[11vw] xl:text-[9vw] 2xl:text-[7vw]"
     >
-      BahiaAyuda
-    </h1>
+      <h1
+        class="lilita-one-regular font-bold text-transparent leading-tight
+              text-[18vw] sm:text-[14vw] md:text-[12vw] lg:text-[11vw] xl:text-[9vw] 2xl:text-[7vw]"
+      >
+        BahiaAyuda
+      </h1>
+    </div>
   </div>
-</div>
   <p class="text-lg text-gray-800 max-w-[90%] sm:max-w-[80%] font-bold">
     Encuentra o brinda ayuda.
   </p>
 
-  <div class="flex flex-wrap justify-center gap-[10px]">
-    <a class="bg-white text-semibold px-[10px] py-[5px] rounded-[5px] shadow-md border border-transparent transition duration-300 ease-in-out hover:text-[#E64076] hover:border-[#4A90E2]" href="tel:08009992272">📞ABSA</a>
-    <a class="bg-white text-semibold px-[10px] py-[5px] rounded-[5px] shadow-md border border-transparent transition duration-300 ease-in-out hover:text-[#E64076] hover:border-[#4A90E2]" href="tel:08009993337">📞EDESUR</a>
-    <a class="bg-white text-semibold px-[10px] py-[5px] rounded-[5px] shadow-md border border-transparent transition duration-300 ease-in-out hover:text-[#E64076] hover:border-[#4A90E2]" href="tel:2914560000">📞Emergencias médicas</a>
-    <a class="bg-white text-semibold px-[10px] py-[5px] rounded-[5px] shadow-md border border-transparent transition duration-300 ease-in-out hover:text-[#E64076] hover:border-[#4A90E2]" href="tel:103">📞Defensa Civil</a>
-    <a class="bg-white text-semibold px-[10px] py-[5px] rounded-[5px] shadow-md border border-transparent transition duration-300 ease-in-out hover:text-[#E64076] hover:border-[#4A90E2]" href="tel:2914551913">📞Bomberos</a>
-    <a class="bg-white text-semibold px-[10px] py-[5px] rounded-[5px] shadow-md border border-transparent transition duration-300 ease-in-out hover:text-[#E64076] hover:border-[#4A90E2]" href="tel:109">📞Emergencias</a>
+  <div class="flex flex-wrap justify-center gap-[10px] px-[10px]">
+    <a
+      class="bg-white text-semibold px-[10px] py-[5px] rounded-[5px] shadow-md border border-transparent transition duration-300 ease-in-out hover:text-[#E64076] hover:border-[#4A90E2]"
+      href="tel:08009992272">📞ABSA</a
+    >
+    <a
+      class="bg-white text-semibold px-[10px] py-[5px] rounded-[5px] shadow-md border border-transparent transition duration-300 ease-in-out hover:text-[#E64076] hover:border-[#4A90E2]"
+      href="tel:08009993337">EDES</a
+    >
+    <a
+      class="bg-white text-semibold px-[10px] py-[5px] rounded-[5px] shadow-md border border-transparent transition duration-300 ease-in-out hover:text-[#E64076] hover:border-[#4A90E2]"
+      href="tel:2914560000">📞Emergencias médicas</a
+    >
+    <a
+      class="bg-white text-semibold px-[10px] py-[5px] rounded-[5px] shadow-md border border-transparent transition duration-300 ease-in-out hover:text-[#E64076] hover:border-[#4A90E2]"
+      href="tel:103">📞Defensa Civil</a
+    >
+    <a
+      class="bg-white text-semibold px-[10px] py-[5px] rounded-[5px] shadow-md border border-transparent transition duration-300 ease-in-out hover:text-[#E64076] hover:border-[#4A90E2]"
+      href="tel:2914551913">📞Bomberos</a
+    >
+    <a
+      class="bg-white text-semibold px-[10px] py-[5px] rounded-[5px] shadow-md border border-transparent transition duration-300 ease-in-out hover:text-[#E64076] hover:border-[#4A90E2]"
+      href="tel:109">📞Emergencias</a
+    >
   </div>
-  
+
   <Button href="/ayuda" />
 
   <div class="flex flex-wrap justify-center items-center gap-6 mt-6">
@@ -85,29 +102,35 @@ import MainButton from "../components/MainButton.astro";
       logo='<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"><path fill="currentColor" d="M7 20q-.825 0-1.412-.587T5 18v-7.15l-2 1.525q-.35.25-.75.213T1.6 12.2t-.2-.75t.4-.65l8.975-6.875q.275-.2.588-.3t.637-.1t.638.1t.587.3L16 6.05V5.5q0-.625.438-1.062T17.5 4t1.063.438T19 5.5v2.85l3.2 2.45q.325.25.388.65t-.188.75t-.65.388t-.75-.213l-2-1.525V18q0 .825-.587 1.413T17 20h-1q-.825 0-1.412-.587T14 18v-2q0-.825-.587-1.412T12 14t-1.412.588T10 16v2q0 .825-.587 1.413T8 20zm3-9.975h4q0-.8-.6-1.313T12 8.2t-1.4.513t-.6 1.312"/></svg>'
     />
     <MainButton
-      link="/"
+      link="https://www.argentina.gob.ar/transporte/vialidad-nacional/estado-de-rutas"
       title="Transito"
       logo='<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"><path fill="currentColor" d="M11 22q-.425 0-.712-.288T10 21v-5q0-.175.025-.35t.075-.325l1.05-2.975q.2-.6.725-.975T13.05 11h5.9q.65 0 1.175.375t.725.975l1.05 2.975q.05.15.075.325T22 16v5q0 .425-.287.713T21 22t-.712-.288T20 21v-.5h-8v.5q0 .425-.288.713T11 22m1-7.5h8l-.7-2h-6.6zm-.5 1.5v3zm1.5 2.5q.425 0 .713-.288T14 17.5t-.288-.712T13 16.5t-.712.288T12 17.5t.288.713t.712.287m6 0q.425 0 .713-.288T20 17.5t-.288-.712T19 16.5t-.712.288T18 17.5t.288.713t.712.287M6 14v-2h2v2zm5-6V6h2v2zM6 18v-2h2v2zm0 4v-2h2v2zm-4 0V10q0-.825.588-1.412T4 8h3V4q0-.825.588-1.412T9 2h6q.825 0 1.413.588T17 4v5h-2V4H9v6H4v12zm9.5-3h9v-3h-9z"/></svg>'
     />
     <MainButton
-      link="/"
+      link="https://www.smn.gob.ar/alertas_area?loc=760"
       title="Clima"
       logo='<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"><path fill="currentColor" d="M9 15.5h6.25q1.15 0 1.95-.812t.8-1.938t-.763-1.912T15.35 10q-.325-1.125-1.25-1.812T12 7.5q-1.025 0-1.875.538T8.85 9.525q-1.2.05-2.025.913T6 12.5q0 1.25.875 2.125T9 15.5m0-2q-.425 0-.712-.288T8 12.5t.275-.7t.675-.3h1.2l.5-1.125q.2-.425.563-.65T12 9.5q.5 0 .9.288t.525.787l.4 1.425h1.45q.325 0 .525.213t.2.537q0 .3-.212.525t-.538.225zm3 8.5q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"/></svg>'
     />
     <MainButton
-      link="/"
-      title="Cortes electricos"
+      link="https://www.infoedes.com/obras-en-tu-barrio/"
+      title="EDES"
       logo='<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.154q-.69 0-1.201-.463t-.607-1.152h3.616q-.096.69-.607 1.152T12 21.154m4.604-7.092L7.427 4.858q.987-.912 2.116-1.385T12 3q2.721 0 4.61 1.89T18.5 9.5q0 1.506-.538 2.605t-1.358 1.956m-3.3.939H8.558q-1.417-.929-2.238-2.356T5.5 9.5q0-.52.091-1.08q.092-.562.236-.897L3.023 4.708q-.14-.14-.153-.342q-.012-.2.153-.366q.16-.16.354-.16t.354.16l16.077 16.077q.146.146.156.344q.009.198-.156.364q-.166.165-.357.165t-.357-.165zM9 17.77q-.213 0-.357-.144t-.143-.357t.143-.356t.357-.144h6.035q.213 0 .356.144t.144.356t-.144.357t-.356.143z"/></svg>'
     />
     <MainButton
-      link="/"
+      link="https://www.bahia.gob.ar/gobierno/defensacivil/"
       title="Defensa Civil"
       logo='<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h10v7.85q0 .575-.25 1.025t-.7.725l-3.55 2.1l.7 2.3H17l-3.1 2.2l1.2 3.8l-3.1-2.35L8.9 22l1.2-3.8L7 16h3.8l.7-2.3l-3.55-2.1q-.45-.275-.7-.725T7 9.85zm4 2v7.05l1 .6l1-.6V4z"/></svg>'
     />
     <MainButton
-      link="/"
+      link="https://forms.gba.gob.ar/formulario/ab8e876e157e1e7dcea31f72c03c80a7114bb499320b1d61aa49f96b25ec9fc2dd051fc62439da777ade7416dc8cb102ee3ce89b309dbe65b9302b8f8cc89165"
       title="Donaciones"
-      logo='<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"><path fill="currentColor" d="m11.3 9.8l-2-2q-.15-.15-.225-.337T9 7.075V3q0-.425.288-.712T10 2h4q.425 0 .713.288T15 3v4.075q0 .2-.075.388T14.7 7.8l-2 2q-.15.15-.325.213t-.375.062t-.375-.062T11.3 9.8m2.9 2.9q-.15-.15-.212-.325T13.925 12t.063-.375t.212-.325l2-2q.15-.15.338-.225T16.925 9H21q.425 0 .713.288T22 10v4q0 .425-.288.713T21 15h-4.075q-.2 0-.387-.075T16.2 14.7zM2 14v-4q0-.425.288-.712T3 9h4.075q.2 0 .388.075T7.8 9.3l2 2q.15.15.213.325t.062.375t-.062.375t-.213.325l-2 2q-.15.15-.337.225T7.075 15H3q-.425 0-.712-.288T2 14m7 7v-4.075q0-.2.075-.387T9.3 16.2l2-2q.15-.15.325-.212t.375-.063t.375.063t.325.212l2 2q.15.15.225.338t.075.387V21q0 .425-.288.713T14 22h-4q-.425 0-.712-.288T9 21"/></svg>'
-      />
+      logo=`<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="3em" height="3em" viewBox="0 0 50.000000 50.000000" preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+<path d="M280 489 c-14 -5 -55 -21 -92 -35 -57 -21 -72 -32 -98 -71 -34 -53 -37 -76 -14 -133 l16 -40 31 33 c17 17 30 35 30 38 -5 16 43 46 65 40 l24 -6 -24 -23 c-13 -13 -39 -33 -58 -46 -46 -29 -60 -68 -35 -96 24 -27 61 -25 99 4 17 13 51 33 76 46 67 33 87 56 116 131 14 38 30 71 35 75 20 12 7 34 -33 58 -51 29 -104 39 -138 25z"/>
+<path d="M236 139 c-48 -36 -89 -37 -121 -5 -19 19 -25 21 -29 9 -24 -61 36 -143 104 -143 74 0 138 100 98 152 -12 14 -17 13 -52 -13z"/>
+</g>
+</svg>`
+    />
   </div>
 </section>
