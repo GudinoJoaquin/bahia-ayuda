@@ -12,7 +12,7 @@ import Nav from "../components/Nav.astro";
     <meta name="generator" content={Astro.generator} />
     <title>BahiaAyuda</title>
   </head>
-  <body class="grid grid-rows-[auto_1fr_auto] min-h-screen relative">
+  <body class="grid grid-rows-[auto_1fr_auto] min-h-screen relative bg-white">
     <section class="relative">
       <Nav />
     </section>
@@ -40,7 +40,7 @@ import Nav from "../components/Nav.astro";
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/lp.svg');
+    background-image: url('');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -51,7 +51,7 @@ import Nav from "../components/Nav.astro";
   /* Cambia el fondo para pantallas pequeñas */
   @media (max-width: 768px) {
     body::after {
-      background-image: url('/lc.svg');
+      background-image: url('');
     }
   }
 </style>

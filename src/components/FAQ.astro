@@ -3,36 +3,36 @@ import DownArrow from "../assets/icons/DownArrow.astro";
 
 const faqs = [
   {
-    titulo: "¿Donde puedo hacer donaciones para Bahia Blanca?",
+    titulo: "Información Inmediata",
     contenido:
-      "Si quiere realizar cualquier tipo de donaciones aprete en saber mas para ver donde puede realizar las donaciones.",
+      "Verificá que tu casa sea segura antes de quedarte. No toques cables mojados ni equipos eléctricos. No camines en aguas profundas o turbias. Si debés evacuar, llevá documentos, medicamentos y lo esencial. Para saber más, consultá el siguiente enlace:",
     enlace:
-      "https://www.senado-ba.gov.ar/Prensa_Noticia_Individual.aspx?IdNoticia=18412",
+      "https://www.argentina.gob.ar/tema/emergencias",
   },
   {
-    titulo: "¿Como hacer RCP?",
+    titulo: "¿Cómo hacer RCP?",
     contenido:
-      "en el siguiente enlace le dejamos un video de como realizar esta tecnica en caso de que sea necesario  .",
-    enlace: " https://www.argentina.gob.ar/salud/primerosauxilios/RCP",
+      "En el siguiente enlace te dejamos un video sobre cómo realizar esta técnica en caso de que sea necesario.",
+    enlace: "https://www.argentina.gob.ar/salud/primerosauxilios/RCP",
   },
   {
-    titulo: "¿Como hacer un kit de supervivencia?",
+    titulo: "¿Cómo hacer un kit de supervivencia?",
     contenido:
-      "En caso de que necesite realizar un kit de emergencia el siguiente link de cruz roja provee la informacion para hacerlo.",
+      "Si necesitás armar un kit de emergencia, el siguiente enlace de la Cruz Roja provee la información necesaria.",
     enlace:
       "https://www.redcross.org/cruz-roja/nosotros/noticias-y-eventos/articulos-de-noticias/La-preparacin-para-el-clima-severo-comienza-ahora-Use-los-consejos-de-seguridad-de-la-Cruz-Roja.html",
   },
   {
-    titulo: "¿Cuales son los telefonos de emergencia?",
+    titulo: "¿Cuáles son los teléfonos de emergencia?",
     contenido:
-      "Si necesita los numeros de emergencia de bahia blanca entre en el link.",
+      "Si necesitás los números de emergencia de Bahía Blanca, ingresá en el siguiente enlace.",
     enlace:
       "https://iosfa.gob.ar/novedades/408/bahia-blanca-telefonos-para-emergencias",
   },
   {
-    titulo: "¿Como potabilizar el agua?",
+    titulo: "¿Cómo potabilizar el agua?",
     contenido:
-      "En el siguiente link se puede encontrar una forma de potabilizar el agua en caso de que sea necesario.",
+      "En el siguiente enlace podés encontrar información sobre cómo potabilizar el agua en caso de necesidad.",
     enlace:
       "https://www.argentina.gob.ar/alimentarsaberes/limpiaryguardar/potabilizaragua",
   },
@@ -64,7 +64,7 @@ const faqs = [
   class="flex flex-col items-center w-full max-w-[800px] mx-auto mb-50 px-4"
 >
   <h2 class="text-3xl font-bold text-gba-blue mb-6 text-center">
-    Información util
+    Información útil
   </h2>
 
   {
@@ -92,3 +92,19 @@ const faqs = [
     ))
   }
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const details = document.querySelectorAll("details");
+
+    details.forEach((detail) => {
+      detail.addEventListener("click", function () {
+        details.forEach((otherDetail) => {
+          if (otherDetail !== detail) {
+            otherDetail.removeAttribute("open");
+          }
+        });
+      });
+    });
+  });
+</script>
