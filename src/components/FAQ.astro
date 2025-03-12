@@ -11,28 +11,41 @@ const faqs = [
   {
     titulo: "¿Cómo hacer RCP?",
     contenido:
-    "En el siguiente enlace te dejamos un video sobre cómo realizar esta técnica en caso de que sea necesario.",
+      "En el siguiente enlace te dejamos un video sobre cómo realizar esta técnica en caso de que sea necesario.",
     enlace: "https://www.argentina.gob.ar/salud/primerosauxilios/RCP",
   },
   {
     titulo: "¿Cómo hacer un kit de supervivencia?",
-    contenido:
-      "Si necesitás armar un kit de emergencia, el siguiente enlace de la Cruz Roja provee la información necesaria.",
+    contenido: [
+      "Agua potable para al menos 3 días/",
+      "Alimentos no perecederos/",
+      "Linterna y pilas de repuesto/",
+      "Botiquín de primeros auxilios/",
+      "Cargador portátil para el celular.",
+    ],
     enlace:
-    "https://www.redcross.org/cruz-roja/nosotros/noticias-y-eventos/articulos-de-noticias/La-preparacin-para-el-clima-severo-comienza-ahora-Use-los-consejos-de-seguridad-de-la-Cruz-Roja.html",
+      "https://www.redcross.org/cruz-roja/nosotros/noticias-y-eventos/articulos-de-noticias/La-preparacin-para-el-clima-severo-comienza-ahora-Use-los-consejos-de-seguridad-de-la-Cruz-Roja.html",
   },
   {
-    titulo: "¿Cuáles son los teléfonos de emergencia?",
-    contenido:
-    "Si necesitás los números de emergencia de Bahía Blanca, ingresá en el siguiente enlace.",
-    enlace:
-    "https://www.bahia.gob.ar/contacto/",
+    titulo: "¿Que puedo hacer para ahorrar bateria?",
+    contenido: [
+      "Reducí el brillo de la pantalla/",
+      "Cerrá aplicaciones en segundo plano/",
+      "Activá el modo ahorro de energía/",
+      "Desconectá el Bluetooth y el GPS si no los usás/",
+      "Evitá temperaturas extremas",
+    ],
+    enlace: "https://support.google.com/android/answer/7664692?hl=es-419",
   },
   {
     titulo: "¿Cómo potabilizar el agua?",
-    contenido:"En el siguiente enlace podés encontrar información sobre cómo potabilizar el agua en caso de necesidad.",
+    contenido: [
+      "Hervir el agua durante al menos 3 minutos/",
+      "Agregar 2 gotas de lavandina por litro y esperar 30 minutos/",
+      "Usar pastillas purificadoras según las indicaciones del fabricante.",
+    ],
     enlace:
-    "https://www.argentina.gob.ar/alimentarsaberes/limpiaryguardar/potabilizaragua",
+      "https://www.argentina.gob.ar/alimentarsaberes/limpiaryguardar/potabilizaragua",
   },
 ];
 ---
@@ -75,7 +88,7 @@ const faqs = [
       >
         <summary class="px-6 py-4 flex justify-between items-center text-black text-lg font-semibold bg-transparent cursor-pointer hover:bg-gray-100 transition-all">
           <span>{titulo}</span>
-          <DownArrow width="24"/>
+          <DownArrow width="24" />
         </summary>
         <div class="px-6 py-4 text-gray-700 border-t border-gray-300 flex flex-col gap-2">
           <p>{contenido}</p>
