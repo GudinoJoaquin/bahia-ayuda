@@ -99,22 +99,29 @@ import Menu from "../assets/icons/Menu.astro";
           >Donaciones</a
         >
       </li>
+      <li>
+        <a
+          href="/acceso"
+          class="block py-2 text-white font-semibold transition-transform duration-300 hover:scale-105"
+          >Como agregar a acceso directo</a
+        >
+      </li>
     </ul>
   </div>
 </nav>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.getElementById("menu-toggle");
     const menu = document.getElementById("menu");
 
-    menuToggle.addEventListener("click", function () {
-      if (menu.classList.contains("max-h-0")) {
+    menuToggle?.addEventListener("click", () => {
+      if (menu?.classList.contains("max-h-0")) {
         menu.classList.remove("max-h-0");
         menu.classList.add("max-h-[800px]");
       } else {
-        menu.classList.remove("max-h-[800px]");
-        menu.classList.add("max-h-0");
+        menu?.classList.remove("max-h-[800px]");
+        menu?.classList.add("max-h-0");
       }
     });
   });

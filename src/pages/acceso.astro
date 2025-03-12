@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <main class="px-[20px]">
+
+  <section class="bg-white p-6 rounded-lg shadow-lg border border-gray-300 mt-8">
+    <h2 class="text-center text-2xl font-bold bg-gba-blue text-white p-3 rounded-lg mb-6">
+      📁 ¿Cómo crear un acceso directo?
+    </h2>
+    <div class="bg-gray-100 p-4 rounded-lg shadow-md border border-gray-300">
+      <ul class="list-disc pl-6 space-y-3">
+        <h2 class="font-semibold text-[22px]">❗ Importante</h2>
+        <li>📌 Los accesos directos funcionan como mini-aplicaciones y se abren en el <strong>navegador predeterminado</strong>.</li>
+        <li>🍏 En iOS, <strong>solo Safari</strong> permite añadir accesos directos a la pantalla de inicio.</li>
+        <li>📱 Si el sitio web es una PWA (Aplicación Web Progresiva), el acceso directo se comportará como una <strong>app nativa</strong>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="flex flex-col lg:flex-row lg:justify-between">
+    <section class="bg-white p-6 rounded-lg shadow-lg border border-gray-300 mt-8">
+      <h2 class="text-center text-2xl font-bold bg-gba-blue text-white p-3 rounded-lg mb-6">
+        📱 Android (Google Chrome)
+      </h2>
+      <div class="bg-gray-100 p-4 rounded-lg shadow-md border border-gray-300">
+        <ul class="list-disc pl-6 space-y-3">
+          <li>🌐 Abrir el sitio web en <strong>Google Chrome</strong>.</li>
+          <li>⚙️ Toca los <strong>tres puntos (⋮)</strong> en la esquina superior derecha.</li>
+          <li>📌 Selecciona <strong>"Añadir a la pantalla de inicio"</strong>.</li>
+          <li>✍️ Personaliza el nombre del acceso directo y confirma.</li>
+          <li>📲 El ícono aparecerá en tu pantalla de inicio.</li>
+          <li>⚠️ Si no ves la opción, verifica los permisos de Chrome en <strong>Configuración > Aplicaciones > Chrome > Añadir a la pantalla de inicio</strong>.</li>
+          <h2 class="font-semibold text-[22px]">🌍 Para otros navegadores (Firefox, Samsung Internet, etc.)</h2>
+          <li>🔍 Busca una opción similar como <strong>"Añadir a pantalla de inicio"</strong> en el menú del navegador.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="bg-white p-6 rounded-lg shadow-lg border border-gray-300 mt-8">
+      <h2 class="text-center text-2xl font-bold bg-gba-blue text-white p-3 rounded-lg mb-6">
+        🍏 iOS (Safari)
+      </h2>
+      <div class="bg-gray-100 p-4 rounded-lg shadow-md border border-gray-300">
+        <ul class="list-disc pl-6 space-y-3">
+          <li>🌍 Abre el sitio web en <strong>Safari</strong>.</li>
+          <li>📤 Toca el ícono de <strong>compartir</strong> (cuadrado con flecha ↑).</li>
+          <li>🛠️ Desplázate y selecciona <strong>"Añadir a la pantalla de inicio"</strong>.</li>
+          <li>✏️ Edita el nombre si lo deseas y pulsa <strong>"Añadir"</strong>.</li>
+          <li>📲 El ícono aparecerá en tu pantalla de inicio.</li>
+          <li>📌 Si no ves la opción, ve a <strong>"Editar acciones"</strong> en el menú de compartir y añádela.</li>
+        </ul>
+      </div>
+    </section>
+  </section>
+
+  <div class="my-6 flex justify-center lg:justify-end">
+    <a href="#" class="bg-gba-blue hover:bg-gba-pink text-white font-bold py-2 px-4 rounded-lg flex items-center transition">
+      📖 Fuente: DeepSeek
+    </a>
+  </div>
+
+</main>
+</Layout>

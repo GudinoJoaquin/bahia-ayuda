@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
+import '../styles/global.css'
 ---
 
 <!doctype html>
@@ -8,9 +9,8 @@ import Nav from "../components/Nav.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>BahiaAyuda</title>
   </head>
   <body class="grid grid-rows-[auto_1fr_auto] min-h-screen relative bg-white">
@@ -26,8 +26,11 @@ import Nav from "../components/Nav.astro";
   </body>
 </html>
 
+<script src="../utils/window-size.js"></script>
+
 <style>
-  html, body {
+  html,
+  body {
     margin: 0;
     width: 100%;
     height: 100%;
@@ -41,7 +44,7 @@ import Nav from "../components/Nav.astro";
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('');
+    background-image: url("");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -52,7 +55,7 @@ import Nav from "../components/Nav.astro";
   /* Cambia el fondo para pantallas pequeñas */
   @media (max-width: 768px) {
     body::after {
-      background-image: url('');
+      background-image: url("");
     }
   }
 </style>
