@@ -1,15 +1,9 @@
 ---
-export interface Props {
-  link: string;
-  title: string;
-  logo: string;
-}
-
-const { link, title, logo} = Astro.props;
+const { link, title, logo, width = 60} = Astro.props;
 
 ---
 
-<a href={link} class="flex flex-col items-center p-4 bg-white shadow-lg rounded-lg transition-transform hover:scale-105">
-  <div class="w-12 h-12 text-gba-blue" set:html={logo}></div>
+<a href={link} class="flex flex-col items-center p-4 bg-white shadow-lg rounded-lg transition-transform w-[100px] h-[130px] hover:scale-105">
+  <div class={`w-[${width}] h-[${width}] text-gba-blue`} set:html={logo}></div>
   <span class="text-gba-pink font-medium mt-2">{title}</span>
 </a>
