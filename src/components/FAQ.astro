@@ -92,3 +92,19 @@ const faqs = [
     ))
   }
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const details = document.querySelectorAll("details");
+
+    details.forEach((detail) => {
+      detail.addEventListener("click", function () {
+        details.forEach((otherDetail) => {
+          if (otherDetail !== detail) {
+            otherDetail.removeAttribute("open");
+          }
+        });
+      });
+    });
+  });
+</script>
